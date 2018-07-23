@@ -1,0 +1,40 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+h1{
+    background: blue;
+    color: wheat;
+    text-align: center;
+  }
+  
+  #buttonid{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+  }
+  .board-display{
+    /*margin-top: 10px;*/
+    margin-left: 60px;
+    /* height: 730px; */
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: auto;
+  }
+  .boards{
+    /*display: inline-block;*/
+    float:left;
+    height: 175px;
+    width : 175px;
+    margin: 20px 25px;
+    border: 4px solid black;
+    padding: 3px;
+    background-color: white;
+  }
+  .boardTitle {
+    border: 2px solid gray;
+
+  }
+
+
+
+
+
