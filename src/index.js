@@ -146,24 +146,33 @@ function reload(){
     .then(function(data){
         console.log(data);
          data.map(function(dataItem){
-            const colhtm2 =  `<div class="card" style="width: 18rem;">
+            const colhtm2 =  `<div class="card p-card" style="width: 18rem;">
             <img class="card-img-top" src="${dataItem.img}" alt="Card image cap" />
             <div class="card-body">
              <h5 class="card-title">${dataItem.name}</h5>
-             
               <button type="buttoon" class="btn btn-primary" id ="${dataItem.id}">Remove Collection</button>
             </div>
           </div>`;
 
           const html3 =   createHTMLElement(colhtm2);
           restCollections.appendChild(html3);
-
-          document.getElementById(`${dataItem.id}`).onclick = () => {
-            deleteCollection(`${dataItem.id}`);
-        }
-        })
+         console.log(document.getElementById(`${dataItem.id}`));
+        //   document.getElementById(`${dataItem.id}`).onclick = () => {
+        //     deleteCollection(`${dataItem.id}`);
+        // }
+        // document.getElementById(`${dataItem.id}`).addEventListener("click",function() {
+        //     deleteCollection(`${dataItem.id}`);
+        
+        // });
+        $('.p-card').on("click", function(){ 
+           console.log('hello = ', this.childNodes[3].childNodes[3].id)
+            let id = this.childNodes[3].childNodes[3].id;
+            let newid = parseInt(id);
+            deleteCollection(newid);
+        });
     })
-};
+});
+}
 
 function deleteCollection(id){
     let fetchData = { 
