@@ -6,6 +6,8 @@ import $ from 'jquery';
 import 'jquery-ui';
 import sortable from 'jquery-ui/ui/widgets/sortable';
 import disableSelection from 'jquery-ui/ui/disable-selection';
+import "../node_modules/font-awesome/css/font-awesome.min.css";
+//require("font-awesome-webpack");
 
 import './scss/base.scss';
 const v =document.getElementById("searchid");
